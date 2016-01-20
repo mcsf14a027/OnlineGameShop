@@ -1,0 +1,103 @@
+﻿@model GameShop.Models.User
+
+
+
+@{Layout = "~/Views/Shared/_Layout.cshtml";}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Online Game Shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/menu.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/script.js" type="text/javascript"></script>
+    <script type="~/Scripts/javascript" src="js/move-top.js"></script>
+    <script type="~/Scripts/javascript" src="js/easing.js"></script>
+    <script src="~/Scripts/jquery-1.7.1.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href='//fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="wrap">
+
+        <div class="main">
+            <div class="content">
+
+                <div class="register_account">
+                    <h3>Register New Account</h3>
+
+                    @using (Html.BeginForm())
+                    {
+ @Html.ValidationSummary()
+                       <p class="input-validation-error">@ViewBag.Message</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>Enter First Name:  
+                                            <p>@Html.TextBoxFor(x => x.fname)</p>
+                                        </div>
+                                        <div>Enter Last Name:   
+                                            <p>@Html.TextBoxFor(x => x.lname)</p>
+                                        </div>
+                                        <div>
+                                            Enter User Name:   
+                                            <p>
+                                                @Html.TextBoxFor(x => x.username, new { id = "t1" })
+                                                <input type="button" class="styled-button-2" id="b1" value="Check Username" />
+                                            </p>
+                                        </div>
+                                        <div>Enter email:   
+                                            <p>@Html.TextBoxFor(x => x.email) </p>
+                                        </div>
+                                        <div>Enter Password:<p>@Html.PasswordFor(x => x.password) </p>
+                                        </div>
+                                        <div class="abcp">
+
+                                            <p>
+                                                <input type="submit" class="styled-button-2" value="Register" /></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> }
+
+                    <p class="terms">By clicking 'Create Account' you agree to the <a href="#">Terms &amp; Conditions</a>.</p>
+                    <div class="clear"></div>
+                    <div>
+
+
+                        <script>
+                            $(document).ready(function () {
+
+                                $('#b1').on("click", function () {
+
+                                    var u = $('#t1').val();
+
+                                    $.getJSON("/Register/checkuser?un=" + u, function (x) {
+                                        if (x) {alert("username already taken :)"); }
+                                        else { alert("Valid username :)"); }
+                                    });
+                                });
+                            });
+
+                        </script>
+
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+

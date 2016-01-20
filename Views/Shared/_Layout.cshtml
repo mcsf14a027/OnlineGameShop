@@ -1,15 +1,166 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    
     <title>@ViewBag.Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/menu.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/script.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/Scripts/move-top.js"></script>
+    <script type="text/javascript" src="~/Scripts/easing.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <header>
+        <div class="header">
+            <div class="header_top">
+                <div class="logo">
+                    <a href="~/Home/Index">
+                        <img src="~/Images/logo.gif" /></a>
+                </div>
+                <div class="header_top_right">
+                  
+                    <div class="search_box">
+                        <form>
+                            <input type="text" value="Search for Products" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}"><input type="submit" value="SEARCH">
+                        </form>
+                    </div>
+                    
+                    <div class="shopping_cart">
+                        
+                        <div class="cart">
+                            <a href="#" title="View my shopping cart" rel="nofollow">
+                                <strong class="opencart"></strong>
+                                <span class="cart_title">Cart</span>
+                                <span class="no_product">(empty)</span>
+                            </a>
+                           
+                        </div>
+                        
+                    </div>
+                     <div class="checkoutbutton">
+                         <a href="preview.html"><span class="checkout_title">Checkout</span></a>
+
+                     </div>
+                    <div class="log_button">
+                        
+                            @Html.ActionLink("Login", "../Register/LogIN",null, new {@class="log_title"}) 
+
+                       <div class="clear"></div>
+                        <div class="reg_button">
+                            
+                            
+                                @Html.ActionLink("Register", "../Register/Register",null, new { @class = "reg_title" })
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                        
+                    
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="h_menu">
+            <a id="touch-menu" class="mobile-menu" href="#">Menu</a>
+            <nav>
+                <ul class="menu list-unstyled">
+                    <li>@Html.ActionLink("HOME", "../Home/Index")</li>
+                    <li class="activate">@Html.ActionLink("XBOX", "../Xbox/Xbox")
+                        <ul class="sub-menu list-unstyled">
+                            <div class="nag-mother-list">
+                                <div class="navg-drop-main">
+                                    <div class="nav-drop">
+                                        <li><a href="products.html">Games</a></li>
+                                        <li><a href="products.html">Consoles</a></li>
+                                        <li><a href="products.html">Accessories</a></li>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("PLAYSTATION", "../Playstation/Playstation")
+                        <ul class="sub-menu list-unstyled sub-menu2">
+                            <div class="navg-drop-main">
+                                <div class="nav-drop nav-top-brand">
+                                    <li><a href="products.html">Games </a></li>
+                                    <li><a href="products.html">Consoles</a></li>
+                                    <li><a href="products.html">Accessories</a></li>
+
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("NINTENDO", "../Nintendo/Nintendo")
+                        <ul class="sub-menu list-unstyled sub-menu3">
+                            <div class="navg-drop-main">
+                                <div class="nav-drop">
+                                    <li><a href="products.html">Games</a></li>
+                                    <li><a href="products.html">Consoles</a></li>
+                                    <li><a href="products.html">Accessories</a></li>
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("ABOUT", "../About/About")</li>
+                    <li>@Html.ActionLink("Contact", "../Contact/Contact")</li>
+                    <div class="clear"></div >
+                </ul>
+            </nav>
+            <script src="~/Scripts/menu.js" type="text/javascript"></script>
+        </div>
+    </header>
     @RenderBody()
 
+
+    <footer>
+        <div class="footer">
+            <div class="wrapper">
+                <div class="section group">
+                    <div class="col_1_of_4 span_1_of_4">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Customer Service</a></li>
+                            <li><a href="#"><span>Contact Us</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col_1_of_4 span_1_of_4">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><span>+92-321-7090753</span></li>
+                            <li><span>+92-042-1212121</span></li>
+                        </ul>
+                        <div class="social-icons">
+                            <h4>Follow Us</h4>
+                            <ul>
+                                <li class="facebook"><a href="#" target="_blank"></a></li>
+                                <li class="twitter"><a href="#" target="_blank"></a></li>
+                                <li class="googleplus"><a href="#" target="_blank"></a></li>
+                                <li class="contact"><a href="#" target="_blank"></a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="copy_right">
+                    <p>&copy; 2016 Online Game Shop. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
