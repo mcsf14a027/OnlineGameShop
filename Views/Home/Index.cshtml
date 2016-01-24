@@ -1,100 +1,15 @@
-﻿<!DOCTYPE HTML>
+﻿@{Layout = "~/Views/Shared/_Layout.cshtml";}
+<!DOCTYPE HTML>
+
 <html>
 <head>
     <title>Online Game Shop</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="~/Content/menu.css" rel="stylesheet" type="text/css" media="all" />
-    <script src="~/Scripts/jquery.min.js"></script>
-    <script src="~/Scripts/script.js" type="text/javascript"></script>
-    <script type="~/Scripts/javascript" src="js/move-top.js"></script>
-    <script type="~/Scripts/javascript" src="js/easing.js"></script>
-    <link href='//fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+    <link href="~/Content/countdown.css" rel="stylesheet" />
+    <script src="~/Scripts/countdown.js"></script>
 </head>
 <body>
     <div class="wrap">
-        <div class="header">
-            <div class="header_top">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="~/Images/logo.gif" /></a>
-                </div>
-                <div class="header_top_right">
-                    <div class="search_box">
-                        <form>
-                            <input type="text" value="Search for Products" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}"><input type="submit" value="SEARCH">
-                        </form>
-                    </div>
-                    <div class="shopping_cart">
-                        <div class="cart">
-                            <a href="#" title="View my shopping cart" rel="nofollow">
-                                <strong class="opencart"></strong>
-                                <span class="cart_title">Cart</span>
-                                <span class="no_product">(empty)</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="login">
-                        <span>@Html.ActionLink("LOGIN", "login")
-                            <img src="~/Images/login.png" alt="" title="login" /></span>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="h_menu">
-            <a id="touch-menu" class="mobile-menu" href="#">Menu</a>
-            <nav>
-                <ul class="menu list-unstyled">
-                    <li>@Html.ActionLink("HOME", "Index")</li>
-                    <li class="activate">@Html.ActionLink("XBOX", "Xbox")
-                        <ul class="sub-menu list-unstyled">
-                            <div class="nag-mother-list">
-                                <div class="navg-drop-main">
-                                    <div class="nav-drop">
-                                        <li><a href="products.html">Games</a></li>
-                                        <li><a href="products.html">Consoles</a></li>
-                                        <li><a href="products.html">Accessories</a></li>
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("PLAYSTATION", "Playstation")
-                        <ul class="sub-menu list-unstyled sub-menu2">
-                            <div class="navg-drop-main">
-                                <div class="nav-drop nav-top-brand">
-                                    <li><a href="products.html">Games </a></li>
-                                    <li><a href="products.html">Consoles</a></li>
-                                    <li><a href="products.html">Accessories</a></li>
 
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("NINTENDO", "Nintendo")
-                        <ul class="sub-menu list-unstyled sub-menu3">
-                            <div class="navg-drop-main">
-                                <div class="nav-drop">
-                                    <li><a href="products.html">Games</a></li>
-                                    <li><a href="products.html">Consoles</a></li>
-                                    <li><a href="products.html">Accessories</a></li>
-                                </div>
-
-                                <div class="clear"></div>
-                            </div>
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("ABOUT", "About")</li>
-                    <li>@Html.ActionLink("Contact", "Contact")</li>
-                    <div class="clear"></div>
-                </ul>
-            </nav>
-            <script src="~/Scripts/menu.js" type="text/javascript"></script>
-        </div>
         <div class="header_bottom">
             <div class="header_bottom_left">
                 <p style="color: #6C6C6C; font-family: 'Monda' , sans-serif;">Latest</p>
@@ -151,12 +66,14 @@
                 <div class="clear"></div>
             </div>
             <div class="header_bottom_right_images">
+
+
                 <!-- FlexSlider -->
                 <section class="slider">
                     <div class="flexslider">
                         <ul class="slides">
                             <li>
-                                <img src="~/Images/xbox1cover.png" alt="" /></li>
+                                <img src="~/Images/xbox1cover.jpg" alt="" /></li>
                             <li>
                                 <img src="~/Images/ps4cover.jpg" alt="" /></li>
                             <li>
@@ -174,25 +91,93 @@
                 <!-- FlexSlider -->
             </div>
             <div class="clear"></div>
-        </div>
+        
 
-        <div class="main">
-            <div class="content">
+    </div>
+    <div class="main">
+        <div class="content">
 
-                <div class="heading">
-                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="heading">
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xbox Special Offers</h3>
 
+            </div>
+            <div class="section group">
+                <div class="grid_1_of_4 images_1_of_4">
+                    <a href="preview-3.html">
+                        <img src="~/Images/xboxonebox.jpg" alt="" /></a>
+                    <h2>XBOX ONE </h2>
+                    <p>XBOX ONE with Kinect Brand new With Discounted Price(Limited time offer)</p>
+                    <p><span class="strike">Rs 49,999</span><span class="price">Rs 44,999</span></p>
+                    <div class="button">
+                        <span>
+                            <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
+                    </div>
+
                 </div>
+
+
+                <div class="grid_1_of_4 images_1_of_4">
+                    <a href="preview-2.html">
+                        <img src="~/Images/xbox360.jpg" alt="" /></a>
+                    <h2>XBOX 360 </h2>
+                    <p>XBOX 360 Slim Edition with Kinect on special Discounted Price(Limited time offer)</p>
+                    <p><span class="strike">Rs 29,999</span><span class="price">Rs 24,999</span></p>
+                    <div class="button">
+                        <span>
+                            <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
+                    </div>
+
+                </div>
+
+
+                <div class="grid_1_of_4 images_1_of_4">
+                    <a href="preview-4.html">
+                        <img src="~/Images/x1c.jpg" alt="" /></a>
+                    <h2>Xbox 360 Controller</h2>
+                    <p>Xbox 360 Original DualShock Controller</p>
+                    <p><span class="strike">Rs 3,500</span><span class="price">Rs 3,000</span></p>
+                    <div class="button">
+                        <span>
+                            <img src="~/Images/cart.jpg" alt="" /><a href="preview-6.html" class="cart-button">Add to Cart</a></span>
+                    </div>
+
+                </div>
+
+
+                <div class="grid_1_of_4 images_1_of_4">
+                    <a href="preview-2.html">
+                        <img src="~/Images/x2c.png" alt="" /></a>
+                    <h2>Xbox One Controller</h2>
+                    <p>Xbox One Original DualShock Controller</p>
+                    <p><span class="strike">Rs 8,000</span><span class="price">Rs 7,000</span></p>
+                    <div class="button">
+                        <span>
+                            <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="content">
+                <div class="heading">
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playstation Special Offers</h3>
+                </div>
+
+
                 <div class="section group">
                     <div class="grid_1_of_4 images_1_of_4">
                         <a href="preview-3.html">
-                            <img src="~/Images/xboxonebox.jpg" alt="" /></a>
-                        <h2>XBOX ONE </h2>
-                        <p>XBOX ONE with Kinect Brand new With Discounted Price(Limited time offer)</p>
-                        <p><span class="strike">Rs 49,999</span><span class="price">Rs 44,999</span></p>
+                            <img src="~/Images/ps4box.jpg" alt="" /></a>
+                        <h2>Playstation 4 </h2>
+                        <p>Playstation 4 Brand new With Discounted Price(Limited time offer)</p>
+                        <p><span class="strike">Rs 57,999</span><span class="price">Rs 52,999</span></p>
                         <div class="button">
                             <span>
                                 <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
@@ -203,10 +188,10 @@
 
                     <div class="grid_1_of_4 images_1_of_4">
                         <a href="preview-2.html">
-                            <img src="~/Images/xbox360.jpg" alt="" /></a>
-                        <h2>XBOX 360 </h2>
-                        <p>XBOX 360 Slim Edition with Kinect on special Discounted Price(Limited time offer)</p>
-                        <p><span class="strike">Rs 29,999</span><span class="price">Rs 24,999</span></p>
+                            <img src="~/Images/ps3box.jpg" alt="" /></a>
+                        <h2>Playstation 3</h2>
+                        <p>Playstation 3 Brand new With Discounted Price(Limited time offer)</p>
+                        <p><span class="strike">Rs 35,999</span><span class="price">Rs 29,999</span></p>
                         <div class="button">
                             <span>
                                 <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
@@ -217,10 +202,10 @@
 
                     <div class="grid_1_of_4 images_1_of_4">
                         <a href="preview-4.html">
-                            <img src="~/Images/x1c.jpg" alt="" /></a>
-                        <h2>Xbox 360 Controller</h2>
-                        <p>Xbox 360 Original DualShock Controller</p>
-                        <p><span class="strike">Rs 3,500</span><span class="price">Rs 3,000</span></p>
+                            <img src="~/Images/ps4c.jpg" alt="" /></a>
+                        <h2>Playstation 4 Controller </h2>
+                        <p>Playstation 4 Original DualShock Controller</p>
+                        <p><span class="strike">Rs 8,000</span><span class="price">Rs 7,000</span></p>
                         <div class="button">
                             <span>
                                 <img src="~/Images/cart.jpg" alt="" /><a href="preview-6.html" class="cart-button">Add to Cart</a></span>
@@ -231,35 +216,33 @@
 
                     <div class="grid_1_of_4 images_1_of_4">
                         <a href="preview-2.html">
-                            <img src="~/Images/x2c.png" alt="" /></a>
-                        <h2>Xbox One Controller</h2>
-                        <p>Xbox One Original DualShock Controller</p>
-                        <p><span class="strike">Rs 8,000</span><span class="price">Rs 7,000</span></p>
+                            <img src="~/Images/ps3c.jpg" alt="" /></a>
+                        <h2>Playstation 3 Controller </h2>
+                        <p>Playstation 3 DualShock Controller Special Edition</p>
+                        <p><span class="strike">Rs 4,000</span><span class="price">Rs 3,000</span></p>
                         <div class="button">
                             <span>
                                 <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
                         </div>
 
                     </div>
-
-
                 </div>
                 <div class="content">
+
                     <div class="heading">
                         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playstation Special Offers</h3>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NINTENDO Special Offers</h3>
+
                     </div>
-
-
                     <div class="section group">
                         <div class="grid_1_of_4 images_1_of_4">
                             <a href="preview-3.html">
-                                <img src="~/Images/ps4box.jpg" alt="" /></a>
-                            <h2>Playstation 4 </h2>
-                            <p>Playstation 4 Brand new With Discounted Price(Limited time offer)</p>
-                            <p><span class="strike">Rs 57,999</span><span class="price">Rs 52,999</span></p>
+                                <img src="~/Images/wiibox.jpg" alt="" /></a>
+                            <h2>Nintendo WII </h2>
+                            <p>Nintendo WII Brand new With Discounted Price(Limited time offer)</p>
+                            <p><span class="strike">Rs 34,999</span><span class="price">Rs 28,999</span></p>
                             <div class="button">
                                 <span>
                                     <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
@@ -270,10 +253,10 @@
 
                         <div class="grid_1_of_4 images_1_of_4">
                             <a href="preview-2.html">
-                                <img src="~/Images/ps3box.jpg" alt="" /></a>
-                            <h2>Playstation 3</h2>
-                            <p>Playstation 3 Brand new With Discounted Price(Limited time offer)</p>
-                            <p><span class="strike">Rs 35,999</span><span class="price">Rs 29,999</span></p>
+                                <img src="~/Images/wiic.jpg" alt="" /></a>
+                            <h2>WII Controller</h2>
+                            <p>Nintendo WII Controller</p>
+                            <p><span class="strike">Rs 3,299</span><span class="price">Rs 2,799</span></p>
                             <div class="button">
                                 <span>
                                     <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
@@ -284,10 +267,10 @@
 
                         <div class="grid_1_of_4 images_1_of_4">
                             <a href="preview-4.html">
-                                <img src="~/Images/ps4c.jpg" alt="" /></a>
-                            <h2>Playstation 4 Controller </h2>
-                            <p>Playstation 4 Original DualShock Controller</p>
-                            <p><span class="strike">Rs 8,000</span><span class="price">Rs 7,000</span></p>
+                                <img src="~/Images/wii3.jpg" alt="" /></a>
+                            <h2>WII Fit Plus Game </h2>
+                            <p>Best Exercising Game on Discounted Price</p>
+                            <p><span class="strike">Rs 3,000</span><span class="price">Rs 2,000</span></p>
                             <div class="button">
                                 <span>
                                     <img src="~/Images/cart.jpg" alt="" /><a href="preview-6.html" class="cart-button">Add to Cart</a></span>
@@ -298,140 +281,41 @@
 
                         <div class="grid_1_of_4 images_1_of_4">
                             <a href="preview-2.html">
-                                <img src="~/Images/ps3c.jpg" alt="" /></a>
-                            <h2>Playstation 3 Controller </h2>
-                            <p>Playstation 3 DualShock Controller Special Edition</p>
-                            <p><span class="strike">Rs 4,000</span><span class="price">Rs 3,000</span></p>
+                                <img src="~/Images/wii4.jpg" alt="" /></a>
+                            <h2>WII 6 in 1 Controllers </h2>
+                            <p>Get 6 Controllers for the price of 1</p>
+                            <p><span class="strike">Rs 8,000</span><span class="price">Rs 4,000</span></p>
                             <div class="button">
                                 <span>
                                     <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
                             </div>
 
-                        </div>
-                    </div>
-                    <div class="content">
-
-                        <div class="heading">
-                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NINTENDO Special Offers</h3>
-
-                        </div>
-                        <div class="section group">
-                            <div class="grid_1_of_4 images_1_of_4">
-                                <a href="preview-3.html">
-                                    <img src="~/Images/wiibox.jpg" alt="" /></a>
-                                <h2>Nintendo WII </h2>
-                                <p>Nintendo WII Brand new With Discounted Price(Limited time offer)</p>
-                                <p><span class="strike">Rs 34,999</span><span class="price">Rs 28,999</span></p>
-                                <div class="button">
-                                    <span>
-                                        <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
-                                </div>
-
-                            </div>
 
 
-                            <div class="grid_1_of_4 images_1_of_4">
-                                <a href="preview-2.html">
-                                    <img src="~/Images/wiic.jpg" alt="" /></a>
-                                <h2>WII Controller</h2>
-                                <p>Nintendo WII Controller</p>
-                                <p><span class="strike">Rs 3,299</span><span class="price">Rs 2,799</span></p>
-                                <div class="button">
-                                    <span>
-                                        <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
-                                </div>
 
-                            </div>
-
-
-                            <div class="grid_1_of_4 images_1_of_4">
-                                <a href="preview-4.html">
-                                    <img src="~/Images/wii3.jpg" alt="" /></a>
-                                <h2>WII Fit Plus Game </h2>
-                                <p>Best Exercising Game on Discounted Price</p>
-                                <p><span class="strike">Rs 3,000</span><span class="price">Rs 2,000</span></p>
-                                <div class="button">
-                                    <span>
-                                        <img src="~/Images/cart.jpg" alt="" /><a href="preview-6.html" class="cart-button">Add to Cart</a></span>
-                                </div>
-
-                            </div>
-
-
-                            <div class="grid_1_of_4 images_1_of_4">
-                                <a href="preview-2.html">
-                                    <img src="~/Images/wii4.jpg" alt="" /></a>
-                                <h2>WII 6 in 1 Controllers </h2>
-                                <p>Get 6 Controllers for the price of 1</p>
-                                <p><span class="strike">Rs 8,000</span><span class="price">Rs 4,000</span></p>
-                                <div class="button">
-                                    <span>
-                                        <img src="~/Images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">Add to Cart</a></span>
-                                </div>
-
-                                
-
-
-                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="footer">
-                    <div class="wrapper">
-                        <div class="section group">
-                            <div class="col_1_of_4 span_1_of_4">
-                                <h4>Information</h4>
-                                <ul>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Customer Service</a></li>
-                                    <li><a href="#"><span>Contact Us</span></a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="col_1_of_4 span_1_of_4">
-                                <h4>Contact</h4>
-                                <ul>
-                                    <li><span>+92-321-7090753</span></li>
-                                    <li><span>+92-042-1212121</span></li>
-                                </ul>
-                                <div class="social-icons">
-                                    <h4>Follow Us</h4>
-                                    <ul>
-                                        <li class="facebook"><a href="#" target="_blank"></a></li>
-                                        <li class="twitter"><a href="#" target="_blank"></a></li>
-                                        <li class="googleplus"><a href="#" target="_blank"></a></li>
-                                        <li class="contact"><a href="#" target="_blank"></a></li>
-                                        <div class="clear"></div>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="copy_right">
-                            <p>&copy; 2016 Online Game Shop. All Rights Reserved</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
-                <link href="~/Content/flexslider.css" rel='stylesheet' type='text/css' />
-                <script defer src="~/Scripts/jquery.flexslider.js"></script>
-                <script type="text/javascript">
-                    $(function () {
-                        SyntaxHighlighter.all();
-                    });
-                    $(window).load(function () {
-                        $('.flexslider').flexslider({
-                            animation: "slide",
-                            start: function (slider) {
-                                $('body').removeClass('loading');
-                            }
-                        });
-                    });
-							  </script>
+            </div>
+        </div>
+    </div>
+    </div>
+           
+            <link href="~/Content/flexslider.css" rel='stylesheet' type='text/css' />
+    <script defer src="~/Scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            SyntaxHighlighter.all();
+        });
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 

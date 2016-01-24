@@ -49,6 +49,23 @@
                          <a href="preview.html"><span class="checkout_title">Checkout</span></a>
 
                      </div>
+                    @if(Session["un"] != null)
+                    { <div class="log_button">
+                        
+                            @Html.ActionLink("Logout", "../Profile/LogOut",null, new {@class="log_title"}) 
+                        </div>
+                       <div class="clear"></div>
+                        <div style="width:150px;margin-left:725px;margin-top:10px">
+                        <a href="../Profile/Profile" ><p style="font-size:12px;font-weight:bold;color:#0094ff;font-style:italic"> Welcome @Session["fname"] !</p></a></div>
+                    }
+                    
+                     
+                   
+
+                        
+                    
+                
+                else{
                     <div class="log_button">
                         
                             @Html.ActionLink("Login", "../Register/LogIN",null, new {@class="log_title"}) 
@@ -61,7 +78,7 @@
 
                             <div class="clear"></div>
                         </div>
-                    </div>
+                    </div>}
                         
                     
                 </div>

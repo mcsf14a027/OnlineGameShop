@@ -1,0 +1,95 @@
+﻿@{Layout = "~/Views/Shared/_Layout.cshtml";}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Online Game Shop</title>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="~/Scripts/gmaps.js"></script>
+</head>
+<body>
+    <div class="wrap">
+
+        <div class="main">
+            <div class="content">
+                <div class="support">
+                    <div class="support_desc">
+                        <h3>Live Support</h3>
+                        <p><span>24 hours | 7 days a week | 365 days a year &nbsp;&nbsp; Live Technical Support. Feel free to contact us.</span></p>
+                        
+                        <h3>Find us here</h3>
+                        <div id="map"></div>
+  <script>
+    var map = new GMaps({
+      el: '#map',
+      lat: 31.475357,
+      lng: 74.343064
+    });
+  </script>
+               <script> map.addMarker({
+     lat: 31.475357,
+     lng: 74.343064,
+  title: 'Online Game Shop Head Office',
+  click: function(e) {
+    alert('We are Here!');
+  }
+});     </script>  
+                    </div>
+                    <img src="~/Images/contact.jpg" alt="" />
+                    <div class="clear"></div>
+                </div>
+                <div class="section group">
+                    <div class="col span_2_of_3">
+                        <div class="contact-form">
+                            <h2>Contact Us</h2>
+                            <form>
+                                <div>
+                                    <span>
+                                        <label>NAME</label></span>
+                                    <span>
+                                        <input type="text" value=""></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>E-MAIL</label></span>
+                                    <span>
+                                        <input type="text" value=""></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>MOBILE.NO</label></span>
+                                    <span>
+                                        <input type="text" value=""></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>SUBJECT</label></span>
+                                    <span>
+                                        <textarea> </textarea></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <input type="submit" value="SUBMIT"></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="company_address">
+                        <h2>Company Information :</h2>
+                        <p>Office # abc, xyz Tower,</p>
+                        <p>pqr Road, Lahore,</p>
+                        <p>Pakistan</p>
+                        <p>Phone:(92) 042 1231231</p>
+                        <p>Fax: (000) 000 00 00 0</p>
+                        <p>Email: <span><a href="mailto:mr.salman.rao@gmail.com">info@onlinegameshop.com</a></span></p>
+                        <p>Follow on: <span><a href="#">Facebook</a></span>, <span><a href="#">Twitter</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+   
+</body>
+</html>
+

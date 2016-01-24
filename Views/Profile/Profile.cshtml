@@ -1,18 +1,36 @@
-﻿@{
-    ViewBag.Title = "Profile";
-}
-@{Layout = "~/Views/Shared/_Layout.cshtml";}
+﻿@{Layout = "~/Views/Shared/_Layout.cshtml";}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Profile</title>
+    
+</head>
+    
+<body>
+    
+    <div class="wrap" style="height: 400px">
+        <p style="font-size: 24px"><b>Profile</b></p>
 
 
-<div class="wrap" style="height:400px">
-    <p style="font-size:24px"><b>Profile</b></p>
-    <p>Welcome @Session["un"]</p>
-<form action="/Profile/save" method="post" enctype="multipart/form-data " >
+        <form action="/Profile/save" method="post" enctype="multipart/form-data ">
 
-    <p style="margin-left:20px;font-size:18px">Upload profile picture: <input type="file" name="image" /></p>
- 
-     
- 
-    <input type="submit" value="upload" />
-</form>
+            <p style="margin-left: 20px; font-size: 14px">
+                Upload profile picture: <input type="file" name="image" />
+            </p>
+            <p><input type="submit" value="upload" /></p>
+        </form>
+        <div class="content">
+            <h1>Details</h1>
+        <div><p>FirstName: <input type="text" style="width:150px;height:20px" readonly="true" value="@ViewBag.Message2" /></p></div>
+            <div class="clear"></div>
+       <div><p>LastName: <input type="text" style="width:150px;height:20px" readonly="true" value="@ViewBag.Message3"/></p></div>
+        <p>Username: <input type="text" style="width:150px;height:20px" readonly="true" value="@ViewBag.Message2" /></p>
+        <p>Email: <input type="text" style="width:150px;height:20px" readonly="true" value="@ViewBag.Message4" /> </p>
+            </div>
+
     </div>
+
+</body>
+</html>
